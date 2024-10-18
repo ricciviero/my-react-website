@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Definizione dell'animazione fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Inizia invisibile */
+    transform: translateY(20px);
+    /* Si sposta verso il basso */
+  }
+
+  100% {
+    opacity: 1;
+    /* Diventa completamente visibile */
+    transform: translateY(0);
+    /* Torna alla posizione originale */
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Imposta generale per l'intera pagina */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  animation: fadeIn 0.5s ease-in;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 10rem 3rem 10rem;
+  /* debugging */
+  border: 1px solid red;
+
+}
+
+.header-logo {
+  margin-right: 1rem;
+  border: 1px solid rgb(0, 26, 255);
+}
+
+.header-logo img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+
+}
+
+.header-logo img:hover {
+  transform: scale(1.05);
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid rgb(0, 26, 255);
+}
+
+.header-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+
+}
+
+.header-title h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #424242;
+  margin: 0.2rem 0 0;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-title {
+    align-items: center;
+  }
+
+  .header-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-title h2 {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* ABOUT */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Centra gli elementi */
+  padding: 3rem 10rem;
+  border: 1px solid red;
+  /* Debugging */
+}
+
+.about-title,
+.about-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  /* Rimuovi margini */
+  padding: 0 12rem;
+  /* Usa padding per spaziatura */
+  max-width: 800px;
+  /* Imposta una larghezza massima */
+  width: 100%;
+  /* Assicurati che occupi il 100% fino al max-width */
+  border: 1px solid rgb(0, 26, 255);
+  /* Debugging */
+}
+
+/* EXPERIENCE */

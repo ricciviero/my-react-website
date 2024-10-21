@@ -3,14 +3,10 @@ import logo from './logo.svg';
 
 // componente header
 export default function Header({ riccardoData }) {
-
-    // estrazione dati dall'array di oggetti Riccardo
-
-
     return (
         <>
-            <header className="flex justify-center items-center p-12 border-b border-red-500 md:flex-col md:text-center">
-                <div className="mr-4 border border-blue-800 transition-transform duration-300 hover:scale-105">
+            <header className="flex justify-center items-center p-12 md:flex-col md:text-center">
+                <div className="transition-transform duration-300 hover:scale-105">
                     <img src={logo} alt="logo" className="max-w-[120px] h-auto" />
                 </div>
                 <div className="flex flex-col justify-center">

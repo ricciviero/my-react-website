@@ -1,14 +1,16 @@
 // importazione componenti
 import Header from './Header.js';
 import About from './About.js';
+import Experience from './Experience.js';
 
 // importazione costanti e variabili
-import { riccardo } from '../back-end/riccardo';
+import { riccardo, workExperience } from '../back-end/riccardo';
 
 // componente app
 export default function App() {
 
   const riccardoData = riccardo[0];
+  const experienceData = workExperience;
 
 
   return (
@@ -16,9 +18,17 @@ export default function App() {
       <Header
         riccardoData={riccardoData}
       />
+
       <About
         riccardoData={riccardoData}
       />
+
+      <Experience
+        experienceData={experienceData}
+      />
+
+
+
     </>
   );
 }

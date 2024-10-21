@@ -26,36 +26,6 @@ export const riccardo = [
             "linkedin": 'https://www.linkedin.com/in/riccardo-civiero-13b2a312b/',
         },
 
-        'skills': {
-            'html': true,
-            'css': true,
-            'tailwind': true,
-            'javascript': true,
-            'node': true,
-            'typescript': true,
-            'react': true,
-            'nextJS': true,
-            'angular': true,
-            'nextUI': true,
-            'magicUI': true,
-            'python': false,
-            'ruby': false,
-            'php': false,
-            'java': false,
-            'c': false,
-            'c++': false,
-            'c#': false,
-            'go': false,
-            'rust': false,
-            'swift': false,
-            'kotlin': false,
-            'flutter': false,
-            'reactNative': false,
-            'ionic': false,
-            'vue': false,
-            'svelte': false,
-        },
-
     }
 ];
 
@@ -107,13 +77,48 @@ export const workExperience = [
     },
 
     {
-        "company": "Stratego",
-        "role": "Junior Copywriter",
-        "city": "Latina",
-        "country": "Italy",
-        "startDate": "Sep 2018",
-        "endDate": "Dec 2019",
-        "description": "I was responsible for the ideation and development of editorial plans for major social media channels, as well as the creation and management of advertising campaigns. This included designing and managing FB/IG ads and crafting comprehensive communication and advertising strategies to meet the brand’s objectives."
+        company: "Stratego",
+        role: "Junior Copywriter",
+        city: "Latina",
+        country: "Italy",
+        startDate: "Sep 2018",
+        endDate: "Dec 2019",
+        description: "I was responsible for the ideation and development of editorial plans for major social media channels, as well as the creation and management of advertising campaigns. This included designing and managing FB/IG ads and crafting comprehensive communication and advertising strategies to meet the brand’s objectives."
 
     },
+];
+
+
+
+export const skills = [
+
+    { name: 'HTML' },
+    { name: 'CSS' },
+    { name: 'Tailwind' },
+    { name: 'JavaScript' },
+    { name: 'Node' },
+    { name: 'TypeScript' },
+    { name: 'React' },
+    { name: 'NextJS' },
+    { name: 'Angular' },
+    { name: 'NextUI' },
+    { name: 'MagicUI' },
+    { name: 'Flutter' },
+    { name: 'React Native' },
+    { name: 'Git' },
+    { name: 'GitHub' }
+
+];
+
+
+export const objProjects = [
+
+    {
+        name: '3 body problem',
+        description: 'This project is a simulation of the three-body problem, a classic problem in physics that describes the motion of three celestial bodies under mutual gravitational attraction. This implementation uses JavaScript and HTML5 Canvas to visualize the gravitational interactions between three bodies in a 2D space.',
+        tech: ['JavaScript', 'HTML', 'CSS'],
+        url: 'https://3-body-problem.netlify.app/',
+        github: 'https://github.com/ricciviero/3-body-problem',
+    }
+
 ];

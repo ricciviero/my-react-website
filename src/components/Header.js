@@ -1,5 +1,7 @@
 // importazione elementi vari
 import logo from './logo.svg';
+import Button from "./Button";
+import SocialLinks from './SocialLinks';
 
 // componente header
 export default function Header({ riccardoData }) {
@@ -14,6 +16,12 @@ export default function Header({ riccardoData }) {
                     <h2 className="text-lg font-normal text-gray-700 mt-1">{riccardoData.miniDescription}</h2>
                 </div>
             </header>
+
+            <Button
+                buttonText={'Send me an Email 🤝'}
+            />
+
+            <SocialLinks />
         </>
     );
 }

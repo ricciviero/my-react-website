@@ -10,6 +10,7 @@ export default function About({ riccardoData }) {
                     <p> {riccardoData.description} </p>
                 </div>
             </section>
+
         </>
     );
 }

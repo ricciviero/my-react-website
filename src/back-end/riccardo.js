@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
 // variabili e costanti
 export const thisYear = new Date().getFullYear();
 export const myYear = 1998;
@@ -119,6 +121,31 @@ export const objProjects = [
         tech: ['JavaScript', 'HTML', 'CSS'],
         url: 'https://3-body-problem.netlify.app/',
         github: 'https://github.com/ricciviero/3-body-problem',
+    },
+
+    {
+        name: 'My Mac Setup',
+        description: 'A simple setup of my MacOs enviroment for development.',
+        tech: ['Shell',],
+        url: null,
+        github: 'https://github.com/ricciviero/Mac-Setup',
+
     }
 
 ];
+
+
+
+export const objSocialLinks = [
+    {
+        name: 'GitHub',
+        url: 'https://github.com/ricciviero',
+        icon: <FaGithub />,
+    },
+
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/riccardo-civiero-13b2a312b/',
+        icon: <FaLinkedin />,
+    }
+]

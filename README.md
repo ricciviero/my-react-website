@@ -39,3 +39,5 @@ This will start the development server and you can view the website at `http://l
 
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to follow the coding standards and include tests for any new features.
+
+👋

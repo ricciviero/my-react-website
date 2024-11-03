@@ -1,6 +1,6 @@
 # My Website
 
-This is a React-based project for creating a personal website.
+This is a React-based project for creating a personal and simple website.
 
 ## Features
 

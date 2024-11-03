@@ -13,7 +13,7 @@ export default function Button({ buttonText, className = '' }) {
                 relative overflow-hidden group
                 px-6 py-3 rounded-full
                 bg-white
-                text-white font-semibold text-sm
+                text-black font-semibold text-sm
                 transition-all duration-300 ease-in-out
                 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50
                 ${className}

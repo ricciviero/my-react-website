@@ -124,11 +124,11 @@ export const objProjects = [
     },
 
     {
-        name: 'My Mac Setup',
-        description: 'A simple setup of my MacOs enviroment for development.',
-        tech: ['Shell',],
-        url: null,
-        github: 'https://github.com/ricciviero/Mac-Setup',
+        name: 'Fattura Netta',
+        description: 'A web application to calculate net invoices for the Italian flat-rate tax regime. ',
+        tech: ['React', 'Tailwind', 'JavaScript'],
+        url: 'https://fattura-netta.vercel.app/',
+        github: 'https://github.com/ricciviero/fattura-netta',
 
     }
 

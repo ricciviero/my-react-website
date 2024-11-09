@@ -11,8 +11,11 @@ export default function Header({ riccardoData }) {
                     <div className="mb-6 transition-transform duration-300 hover:scale-110">
                         <img src={logo} alt="logo" className="w-32 h-32 rounded-full border-4 border-white shadow-lg" />
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm {riccardoData.name} 👋</h1>
-                    <h2 className="text-xl md:text-2xl font-light mb-6">{riccardoData.miniDescription}</h2>
+                    <div className="flex flex-row items-center text-center">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm {riccardoData.name}</h1>
+                        <p className="text-4xl md:text-5xl font-bold mb-2 motion-rotate-in-45 motion-ease-spring-bouncy">👋</p>
+                    </div >
+                    <h2 className="text-xl md:text-2xl font-light mb-6 motion-preset-typewriter-[40]">{riccardoData.miniDescription}</h2>
                     <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
                         <Button
                             buttonText="Send me an Email 🤝"

@@ -1,4 +1,4 @@
-# My Website
+# My React Website
 
 This is a React-based project for creating a personal and simple website.
 
@@ -12,11 +12,11 @@ This is a React-based project for creating a personal and simple website.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/my-website.git
+    git clone https://github.com/ricciviero/my-react-website.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd my-website
+    cd my-react-website
     ```
 3. Install dependencies:
     ```bash

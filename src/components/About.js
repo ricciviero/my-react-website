@@ -9,7 +9,7 @@ export default function About({ riccardoData }) {
                         About me 🫨
                         <span className="absolute bottom-0 left-0 w-full h-1 transform -translate-y-2"></span>
                     </h2>
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-lg text-gray-700 leading-relaxed px-4 md:px-0">
                         {riccardoData.description}
                     </p>
                 </div>

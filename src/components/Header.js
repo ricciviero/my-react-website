@@ -13,12 +13,16 @@ export default function Header({ riccardoData }) {
                     </div>
                     <div className="flex flex-row items-center text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm {riccardoData.name} DEV MODE</h1>
-                        <p className="text-4xl md:text-5xl font-bold mb-2 motion-rotate-in-45 motion-ease-spring-bouncy">👋</p>
+                        <p className="text-4xl md:text-5xl font-bold mb-2">👋</p>
                     </div >
-                    <h2 className="text-xl md:text-2xl font-light mb-6 motion-preset-typewriter-[40]">{riccardoData.miniDescription}</h2>
+                    <h2 className="text-xl md:text-2xl font-light mb-6">{riccardoData.miniDescription}</h2>
                     <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
                         <Button
                             buttonText="Send me an Email 🤝"
+                            className="bg-white text-purple-600 hover:bg-purple-100 transition-colors duration-300 py-2 px-6 rounded-full font-semibold text-lg shadow-md"
+                        />
+                        <Button
+                            buttonText="Download my CV 📄"
                             className="bg-white text-purple-600 hover:bg-purple-100 transition-colors duration-300 py-2 px-6 rounded-full font-semibold text-lg shadow-md"
                         />
                         <SocialLinks className="flex space-x-4" />

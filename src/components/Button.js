@@ -5,11 +5,24 @@ export default function Button({ buttonText, className = '' }) {
         window.open('mailto:riccardo@riccardociviero.com');
     }
 
+    function downloadCV() {
+        window.open('https://drive.google.com/file/d/1DIiNHqTWypWC7M87ogN19I372Ddp8pKy/view?usp=sharing');
+    }
+
     return (
         <button
             type="button"
-            onClick={sendMail}
-            className={`
+
+            onClick=
+            {
+                buttonText === 'Send me an Email 🤝'
+                    ? sendMail
+                    : downloadCV
+            }
+
+            className=
+            {
+                `
                 relative overflow-hidden group
                 px-6 py-3 rounded-full
                 bg-white
@@ -17,7 +30,8 @@ export default function Button({ buttonText, className = '' }) {
                 transition-all duration-300 ease-in-out
                 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50
                 ${className}
-            `}
+            `
+            }
         >
             <span className="relative z-10">{buttonText}</span>
             <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 ease-in-out"></span>

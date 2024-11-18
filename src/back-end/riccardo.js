@@ -93,11 +93,8 @@ export const skills = [
     { name: 'TypeScript' },
     { name: 'React' },
     { name: 'NextJS' },
-    { name: 'Angular' },
     { name: 'NextUI' },
     { name: 'MagicUI' },
-    { name: 'Flutter' },
-    { name: 'React Native' },
     { name: 'Git' },
     { name: 'GitHub' }
 

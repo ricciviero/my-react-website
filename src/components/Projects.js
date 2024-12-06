@@ -5,7 +5,7 @@ export default function Projects({ projectsData }) {
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold mb-16 relative inline-block w-full text-center">
-                    Projects 🚀
+                    Some Projects 🚀
                     <span className="absolute bottom-0 left-1/2 w-24 h-1 transform -translate-x-1/2 -translate-y-2"></span>
                 </h2>
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">

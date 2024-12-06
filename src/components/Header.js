@@ -25,6 +25,10 @@ export default function Header({ riccardoData }) {
                             buttonText="Download my CV 📄"
                             className="bg-white text-purple-600 hover:bg-purple-100 transition-colors duration-300 py-2 px-6 rounded-full font-semibold text-lg shadow-md"
                         />
+                        <Button
+                            buttonText="Book a call 📅"
+                            className="bg-white text-purple-600 hover:bg-purple-100 transition-colors duration-300 py-2 px-6 rounded-full font-semibold text-lg shadow-md"
+                        />
                         <SocialLinks className="flex space-x-4" />
                     </div>
                 </div>

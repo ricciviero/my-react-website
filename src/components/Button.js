@@ -9,6 +9,10 @@ export default function Button({ buttonText, className = '' }) {
         window.open('https://drive.google.com/file/d/1DIiNHqTWypWC7M87ogN19I372Ddp8pKy/view?usp=sharing');
     }
 
+    function bookMeeting() {
+        window.open('https://cal.com/ricciviero/30min');
+    }
+
     return (
         <button
             type="button"
@@ -17,7 +21,9 @@ export default function Button({ buttonText, className = '' }) {
             {
                 buttonText === 'Send me an Email 🤝'
                     ? sendMail
-                    : downloadCV
+                    : buttonText === 'Download my CV 📄'
+                        ? downloadCV
+                        : bookMeeting
             }
 
             className=

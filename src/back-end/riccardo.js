@@ -18,8 +18,8 @@ export const riccardo = [
         "city": "Latina",
         "country": "Italy",
         "job": "Front-End Developer",
-        "miniDescription": 'Front-End Developer in love with Tech.',
-        "description": 'I’m a 26-year-old passionate about all things tech. After spending several years in marketing, I recently made the leap into development, with a primary focus on front-end technologies. I’m currently deepening my knowledge of frameworks like React, Flutter, Angular, and React Native.',
+        "miniDescription": 'Front-End Developer, React & Next.js Specialist. Building Responsive, Scalable, and User-Friendly Web App.',
+        "description": 'I’m a 26-year-old passionate about all things tech. As a front-end developer with a strong foundation in React and Next.js, I excel in building high-performance, scalable, and user-focused web applications.',
         "company": "Freelance",
         "email": 'riccardo@riccardociviero.com',
         "phone": '+39 379 1100715',
@@ -38,25 +38,25 @@ export const riccardo = [
 export const workExperience = [
 
     {
-        "company": "Full Stack Developer",
-        "role": "Career Switcher",
+        "company": "Fast 2 Digital",
+        "role": "Front-End Developer",
         "city": "Full-Remote",
         "country": "Italy",
         "startDate": "Jan 2024",
         "endDate": "Present",
-        "description": "Engaging in self-directed learning, I am actively studying web development through online courses and tutorials to build a strong foundation in both front-end and back-end technologies."
+        "description": "Led cross-functional teams in developing React-based web applications with a micro-frontend approach, focusing on modular, performant, and responsive design."
 
     },
 
     {
 
         "company": "Let's Talk",
-        "role": "Project Manager",
+        "role": "Project Manager & Front-End Developer",
         "city": "Rome",
         "country": "Italy",
         "startDate": "Jan 2022",
         "endDate": "Dec 2023",
-        "description": "I led efforts in acquiring new clients by identifying opportunities, pitching agency services, and building long-term relationships with potential clients."
+        "description": "Led client acquisition and project delivery by identifying business opportunities, proposing React-based solutions, and negotiating contracts to expand digital services."
 
     },
     {
@@ -67,16 +67,6 @@ export const workExperience = [
         "startDate": "Sep 2021",
         "endDate": "Dec 2021",
         "description": "I acted as the primary point of contact for clients such as Uliveto and Yamamay, ensuring effective communication and alignment on campaign objectives."
-
-    },
-    {
-        "company": "Four ADV",
-        "role": "Project Manager",
-        "city": "Latina",
-        "country": "Italy",
-        "startDate": "Jan 2020",
-        "endDate": "Aug 2021",
-        "description": "I served as the primary point of contact between the agency and clients, ensuring clear communication and a thorough understanding of client needs."
 
     },
 ];
@@ -93,11 +83,11 @@ export const skills = [
     { name: 'TypeScript' },
     { name: 'React' },
     { name: 'NextJS' },
-    { name: 'Angular' },
     { name: 'NextUI' },
     { name: 'MagicUI' },
-    { name: 'Flutter' },
+    { name: 'Shadcn' },
     { name: 'React Native' },
+    { name: "Swift" },
     { name: 'Git' },
     { name: 'GitHub' }
 
@@ -117,10 +107,25 @@ export const objProjects = [
     {
         name: 'Fattura Netta',
         description: 'A web application to calculate net invoices for the Italian flat-rate tax regime. ',
-        tech: ['React', 'Tailwind', 'JavaScript'],
+        tech: ['React', 'ViteJS', 'Tailwind', 'JavaScript'],
         url: 'https://fattura-netta.vercel.app/',
         github: 'https://github.com/ricciviero/fattura-netta',
 
+    },
+
+    {
+        name: 'Talentify',
+        description: 'A simple landing page for Talentify, a dev community.',
+        tech: ['React', 'ViteJS', 'Tailwind', 'JavaScript'],
+        url: 'https://talentify-community.vercel.app/',
+        github: 'https://github.com/ricciviero/talentify-landing-page',
+    },
+
+    {
+        name: 'ZeroNeet',
+        description: 'A simple landing page for ZeroNeet, a beatiful startup community.',
+        tech: ['React', 'ViteJS', 'Tailwind', 'JavaScript'],
+        url: 'https://zeroneet.com/',
     }
 
 ];

@@ -12,7 +12,7 @@ export default function Header({ riccardoData }) {
                         <img src={logo} alt="logo" className="w-32 h-32 rounded-full border-4 border-white shadow-lg" />
                     </div>
                     <div className="flex flex-row items-center text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm {riccardoData.name} DEV MODE</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm {riccardoData.name}</h1>
                         <p className="text-4xl md:text-5xl font-bold mb-2">👋</p>
                     </div >
                     <h2 className="text-xl md:text-2xl font-light mb-6">{riccardoData.miniDescription}</h2>

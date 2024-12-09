@@ -69,7 +69,8 @@ export default function Header({ riccardoData }) {
                         variants={itemVariants}
                         className="text-xl md:text-2xl font-light mb-6"
                     >
-                        {riccardoData.miniDescription}
+                        Front-End Developer, React & Next.js Specialist.<br />
+                        Building Responsive, Scalable, and User-Friendly Web App. <br />
                     </motion.h2>
 
                     <motion.div

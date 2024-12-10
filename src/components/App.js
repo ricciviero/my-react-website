@@ -5,6 +5,9 @@ import Experience from './Experience.js';
 import Skills from './Skills.js';
 import Projects from './Projects.js';
 
+// Analytics
+import { Analytics } from "@vercel/analytics/react"
+
 // importazione costanti e variabili
 import { riccardo, workExperience, skills, objProjects } from '../back-end/riccardo';
 
@@ -20,6 +23,7 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
       <Header
         riccardoData={riccardoData}
       />

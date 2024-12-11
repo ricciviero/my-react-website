@@ -1,6 +1,29 @@
+import { motion } from 'framer-motion';
+
 const Footer = () => {
+    const footerVariants = {
+        hidden: {
+            opacity: 0,
+            y: 20
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut'
+            }
+        }
+    };
+
     return (
-        <footer className="py-8 px-6 mt-28 mb-8 bg-gray-50">
+        <motion.footer
+            className="py-8 px-6 mt-28 mb-8 bg-gray-50"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={footerVariants}
+        >
             <div className="max-w-6xl mx-auto text-center">
                 {/* Logo e Descrizione */}
                 <div className="mb-6 flex items-center justify-center">
@@ -25,7 +48,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 

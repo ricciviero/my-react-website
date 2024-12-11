@@ -4,6 +4,7 @@ import About from './About.js';
 import Experience from './Experience.js';
 import Skills from './Skills.js';
 import Projects from './Projects.js';
+import Footer from './Footer.js';
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react"
@@ -44,7 +45,7 @@ export default function App() {
         projectsData={projectsData}
       />
 
-
+      <Footer />
 
     </>
   );

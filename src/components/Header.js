@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import logo from './logo.svg';
 import Button from './Button';
+import WhatsAppButton from './WhatsappButton';
 import SocialLinks from './SocialLinks';
 
 export default function Header({ riccardoData }) {
@@ -77,10 +78,8 @@ export default function Header({ riccardoData }) {
                         variants={itemVariants}
                         className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
                     >
-                        <Button
-                            buttonText="Send me an Email 🤝"
-                            className="bg-white text-purple-600 hover:bg-purple-100 transition-colors duration-300 py-2 px-6 rounded-full font-semibold text-lg shadow-md"
-                        />
+                        <WhatsAppButton />
+
                         <Button
                             buttonText="Download my CV 📄"
                             className="bg-white text-purple-600 hover:bg-purple-100 transition-colors duration-300 py-2 px-6 rounded-full font-semibold text-lg shadow-md"

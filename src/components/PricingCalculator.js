@@ -107,7 +107,7 @@ const PricingCalculator = () => {
                             })
                             window.location.reload()
                         }}
-                        className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors duration-200 group"
+                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full font-semibold text-center transition-all duration-300 hover:from-purple-600 hover:to-indigo-700 hover:shadow-md"
                     >
                         <svg
                             className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-200"
@@ -308,9 +308,9 @@ const PricingCalculator = () => {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={state.submitting}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full font-semibold text-center transition-all duration-300 hover:from-purple-600 hover:to-indigo-700 hover:shadow-md"
                     >
-                        {state.submitting ? 'Sending...' : 'Send'}
+                        {state.submitting ? '⏳' : 'Send'}
                     </motion.button>
                 </motion.form>
             </div>

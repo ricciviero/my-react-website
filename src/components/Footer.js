@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+
 const Footer = () => {
     const footerVariants = {
         hidden: {
@@ -46,6 +47,13 @@ const Footer = () => {
                     <p className="text-sm">
                         Made with ❤️ by me
                     </p>
+
+                    <a
+                        href="/privacy"
+                        className="text-blue-500 hover:text-blue-600"
+                    >
+                        Privacy Policy
+                    </a>
                 </div>
             </div>
         </motion.footer>

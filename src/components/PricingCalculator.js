@@ -12,19 +12,24 @@ const PricingCalculator = () => {
         projectType: '',
         budget: '',
         timeline: '',
-        description: ''
+        description: '',
+        privacyAccepted: false
     })
 
     const handleChange = (e) => {
+        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value
         setFormData(prev => ({
             ...prev,
-            [e.target.name]: e.target.value
+            [e.target.name]: value
         }))
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        // Handle both local state and Formspree submission
+        if (!formData.privacyAccepted) {
+            alert('Please accept the privacy policy to continue')
+            return
+        }
         console.log('Form submitted:', formData)
         await handleFormspreeSubmit(e)
     }
@@ -365,6 +370,46 @@ const PricingCalculator = () => {
                             rows="4"
                             placeholder="Tell me about your project..."
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 text-gray-800 placeholder-gray-400 resize-none"
+                        />
+                    </motion.div>
+
+                    <motion.div
+                        variants={itemVariants}
+                        className="space-y-2"
+                    >
+                        <div className="flex items-start space-x-2">
+                            <input
+                                type="checkbox"
+                                id="privacyAccepted"
+                                name="privacyAccepted"
+                                checked={formData.privacyAccepted}
+                                onChange={handleChange}
+                                className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                required
+                            />
+                            <label
+                                htmlFor="privacyAccepted"
+                                className="text-sm text-gray-600"
+                            >
+                                I accept the{' '}
+                                <a
+                                    href="/privacy"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        window.location.href = '/privacy'
+                                    }}
+                                    className="text-indigo-600 hover:text-indigo-800 underline"
+                                >
+                                    privacy policy
+                                </a>
+                                <span className="text-red-500">*</span>
+                            </label>
+                        </div>
+                        <ValidationError
+                            prefix="Privacy Policy"
+                            field="privacyAccepted"
+                            errors={state.errors}
+                            className="text-red-500 text-sm mt-1"
                         />
                     </motion.div>
 

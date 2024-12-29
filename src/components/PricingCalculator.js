@@ -29,27 +29,77 @@ const PricingCalculator = () => {
         await handleFormspreeSubmit(e)
     }
 
-    // Animation variants
+    // Enhanced animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
+                staggerChildren: 0.15,
+                delayChildren: 0.3,
+                duration: 0.6,
+                ease: [0.6, -0.05, 0.01, 0.99] // Custom easing
             }
         }
     }
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
+        hidden: {
+            opacity: 0,
+            y: 30,
+            scale: 0.95
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.6,
+                ease: [0.6, -0.05, 0.01, 0.99]
+            }
+        }
+    }
+
+    // Success animation variants
+    const successVariants = {
+        hidden: {
+            opacity: 0,
+            scale: 0.8,
+            y: 20
+        },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: [0.6, -0.05, 0.01, 0.99],
+                staggerChildren: 0.1
+            }
+        }
+    }
+
+    const successChildVariants = {
+        hidden: {
+            opacity: 0,
+            y: 20
+        },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
                 duration: 0.5,
-                ease: 'easeOut'
+                ease: [0.6, -0.05, 0.01, 0.99]
             }
+        }
+    }
+
+    // Form field focus animation
+    const focusAnimation = {
+        scale: 1.02,
+        transition: {
+            duration: 0.2,
+            ease: 'easeInOut'
         }
     }
 
@@ -57,14 +107,17 @@ const PricingCalculator = () => {
     if (state.succeeded) {
         return (
             <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
+                variants={successVariants}
+                initial="hidden"
+                animate="visible"
                 className="w-full max-w-2xl mx-auto px-4 py-12"
             >
                 <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 text-center relative overflow-hidden">
-                    {/* Success icon/checkmark */}
-                    <div className="mb-6">
+                    <motion.div
+                        variants={successChildVariants}
+                        className="mb-6"
+                    >
+                        {/* Success icon/checkmark */}
                         <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
                             <svg
                                 className="w-8 h-8 text-green-500"
@@ -80,22 +133,34 @@ const PricingCalculator = () => {
                                 />
                             </svg>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Success message */}
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    <motion.h2
+                        variants={successChildVariants}
+                        className="text-3xl font-bold text-gray-900 mb-4"
+                    >
                         Thank you.
-                    </h2>
-                    <p className="text-gray-600 text-lg mb-8">
+                    </motion.h2>
+                    <motion.p
+                        variants={successChildVariants}
+                        className="text-gray-600 text-lg mb-8"
+                    >
                         I've received your project details and will get back to you soon.
-                    </p>
+                    </motion.p>
 
                     {/* Decorative elements */}
                     <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-blue-50 rounded-full opacity-50" />
                     <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-32 h-32 bg-green-50 rounded-full opacity-50" />
 
                     {/* Return button */}
-                    <button
+                    <motion.button
+                        variants={successChildVariants}
+                        whileHover={{
+                            scale: 1.05,
+                            transition: { duration: 0.2 }
+                        }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => {
                             setFormData({
                                 companyName: '',
@@ -123,7 +188,7 @@ const PricingCalculator = () => {
                             />
                         </svg>
                         Submit Another Project
-                    </button>
+                    </motion.button>
                 </div>
             </motion.div>
         )
@@ -159,6 +224,7 @@ const PricingCalculator = () => {
                 >
                     <motion.div
                         variants={itemVariants}
+                        whileFocus={focusAnimation}
                         className="space-y-2"
                     >
                         <label
@@ -304,13 +370,29 @@ const PricingCalculator = () => {
 
                     <motion.button
                         variants={itemVariants}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                        whileHover={{
+                            scale: 1.03,
+                            transition: { duration: 0.2 }
+                        }}
+                        whileTap={{ scale: 0.97 }}
                         type="submit"
                         disabled={state.submitting}
                         className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full font-semibold text-center transition-all duration-300 hover:from-purple-600 hover:to-indigo-700 hover:shadow-md"
                     >
-                        {state.submitting ? '⏳' : 'Send'}
+                        {state.submitting ? (
+                            <motion.span
+                                animate={{
+                                    rotate: 360,
+                                    transition: {
+                                        duration: 1.5,
+                                        repeat: Infinity,
+                                        ease: "linear"
+                                    }
+                                }}
+                            >
+                                ⏳
+                            </motion.span>
+                        ) : 'Send'}
                     </motion.button>
                 </motion.form>
             </div>

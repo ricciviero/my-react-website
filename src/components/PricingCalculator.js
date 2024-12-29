@@ -293,9 +293,9 @@ const PricingCalculator = () => {
                         >
                             <option value="">Select project type *</option>
                             <option value="landing-page"> Landing Page</option>
-                            <option value="website">Complete Website</option>
+                            <option value="complete-website">Complete Website</option>
                             <option value="web-app">Web App</option>
-                            <option value="mobile">Mobile App</option>
+                            <option value="mobile-app">Mobile App</option>
                         </select>
                     </motion.div>
 
@@ -318,11 +318,10 @@ const PricingCalculator = () => {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 text-gray-800 placeholder-gray-400"
                         >
                             <option value="">Select budget range *</option>
-                            <option value="mini"> €500 - €5.000</option>
-                            <option value="small">€5.000 - €10.000</option>
-                            <option value="medium">€10.000 - €25.000</option>
-                            <option value="large">€25.000 - €50.000</option>
-                            <option value="enterprise">€50.000+</option>
+                            <option value="500-5000"> €500 - €5.000</option>
+                            <option value="5000-10000">€5.000 - €10.000</option>
+                            <option value="10000-25000">€10.000 - €25.000</option>
+                            <option value="25000-50000">€25.000 - €50.000</option>
                         </select>
                     </motion.div>
 
@@ -345,10 +344,10 @@ const PricingCalculator = () => {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 text-gray-800 placeholder-gray-400"
                         >
                             <option value="">Select timeline *</option>
-                            <option value="urgent">Less than 1 month</option>
-                            <option value="normal">1-3 months</option>
-                            <option value="relaxed">3-6 months</option>
-                            <option value="flexible">6+ months</option>
+                            <option value="now">Less than 1 month</option>
+                            <option value="three-months">1-3 months</option>
+                            <option value="six-months">3-6 months</option>
+                            <option value="six-plus-months">6+ months</option>
                         </select>
                     </motion.div>
 

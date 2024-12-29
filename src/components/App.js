@@ -4,6 +4,7 @@ import About from './About.js';
 import Experience from './Experience.js';
 import Skills from './Skills.js';
 import Projects from './Projects.js';
+import PricingCalculator from './PricingCalculator.js';
 import Footer from './Footer.js';
 
 // Analytics
@@ -44,6 +45,8 @@ export default function App() {
       <Projects
         projectsData={projectsData}
       />
+
+      <PricingCalculator />
 
       <Footer />
 

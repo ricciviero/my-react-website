@@ -26,10 +26,10 @@ const PricingCalculator = () => {
             <div className="space-y-6">
                 <div className="text-center space-y-2">
                     <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        Project Calculator
+                        Project Builder
                     </h1>
                     <p className="text-gray-500">
-                        Get an instant estimate for your project
+                        Let's build your project together
                     </p>
                 </div>
 
@@ -53,10 +53,10 @@ const PricingCalculator = () => {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 text-gray-800 placeholder-gray-400"
                         >
                             <option value="">Select project type</option>
-                            <option value="website">Website Development</option>
+                            <option value="landing-page"> Landing Page</option>
+                            <option value="website">Complete Website</option>
+                            <option value="web-app">Web App</option>
                             <option value="mobile">Mobile App</option>
-                            <option value="desktop">Desktop Application</option>
-                            <option value="other">Other</option>
                         </select>
                     </div>
 
@@ -76,10 +76,11 @@ const PricingCalculator = () => {
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 text-gray-800 placeholder-gray-400"
                         >
                             <option value="">Select budget range</option>
-                            <option value="small">$5,000 - $10,000</option>
-                            <option value="medium">$10,000 - $25,000</option>
-                            <option value="large">$25,000 - $50,000</option>
-                            <option value="enterprise">$50,000+</option>
+                            <option value="mini"> €500 - €5.000</option>
+                            <option value="small">€5.000 - €10.000</option>
+                            <option value="medium">€10.000 - €25.000</option>
+                            <option value="large">€25.000 - €50.000</option>
+                            <option value="enterprise">€50.000+</option>
                         </select>
                     </div>
 
@@ -120,7 +121,7 @@ const PricingCalculator = () => {
                             value={formData.description}
                             onChange={handleChange}
                             rows="4"
-                            placeholder="Tell us about your project..."
+                            placeholder="Tell me about your project..."
                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 text-gray-800 placeholder-gray-400 resize-none"
                         />
                     </div>
@@ -128,7 +129,7 @@ const PricingCalculator = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                     >
                         Calculate Estimate
                     </button>

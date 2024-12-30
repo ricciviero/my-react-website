@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import RicTag from './RicTag';
 
 const Footer = () => {
     const footerVariants = {
@@ -44,9 +44,9 @@ const Footer = () => {
                 <div className="border-t border-gray-800 mt-6 pt-4 text-sm">
                     © {new Date().getFullYear()} All rights reserved.{" "}
 
-                    <p className="text-sm">
-                        Made with ❤️ by me
-                    </p>
+                    <div className="flex justify-center">
+                        <RicTag />
+                    </div>
 
                     <a
                         href="/privacy"

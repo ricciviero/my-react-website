@@ -114,10 +114,10 @@ export const objProjects = [
     },
 
     {
-        name: 'Talentify',
-        description: 'A simple landing page for Talentify, a dev community.',
+        name: 'Talentifier',
+        description: 'A simple landing page for Talentifier, a dev community.',
         tech: ['React', 'ViteJS', 'Tailwind', 'JavaScript'],
-        url: 'https://talentify-community.vercel.app/',
+        url: 'https://www.talentifier.dev/',
         github: 'https://github.com/ricciviero/talentify-landing-page',
     },
 

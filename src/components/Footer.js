@@ -31,9 +31,9 @@ const Footer = () => {
                     <h3 className="text-2xl font-bold">Riccardo Civiero</h3>
                 </div>
                 <p className="text-sm">
-                    Partita IVA: 03241840598
+                    VAT: IT03241840598
                     <br></br>
-                    Codice Fiscale: CVRRCR98D18E472Y
+                    Tax ID: CVRRCR98D18E472Y
                     <br></br>
                     Email: riccardo@riccardociviero.com
                 </p>

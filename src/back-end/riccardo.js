@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-
+import { FaSpotify } from 'react-icons/fa';
 // variabili e costanti
 export const thisYear = new Date().getFullYear();
 export const myYear = 1998;
@@ -149,6 +149,12 @@ export const objSocialLinks = [
         name: 'X',
         url: 'https://x.com/ricciviero',
         icon: <FaXTwitter />,
+    },
+
+    {
+        name: 'Spotify',
+        url: 'https://open.spotify.com/user/11140244507?si=9ROyuKgpQSWFaguu5y8ZRg',
+        icon: <FaSpotify />,
     }
 ]
 

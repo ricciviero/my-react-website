@@ -7,9 +7,14 @@ import SocialLinks from './SocialLinks';
 
 export default function Header({ riccardoData }) {
     const [isLoading, setIsLoading] = useState(true);
+    const [showEnterButton, setShowEnterButton] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setIsLoading(false), 2000);
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+            // Show enter button shortly after loading completes
+            setTimeout(() => setShowEnterButton(true), 1000);
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -103,6 +108,36 @@ export default function Header({ riccardoData }) {
         }
     };
 
+    const enterButtonVariants = {
+        hidden: {
+            opacity: 0,
+            scale: 0.8,
+            y: 20
+        },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+                type: 'spring',
+                damping: 12,
+                stiffness: 100
+            }
+        },
+        hover: {
+            scale: 1.05,
+            boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
+            transition: {
+                type: 'spring',
+                stiffness: 400,
+                damping: 10
+            }
+        },
+        tap: {
+            scale: 0.95
+        }
+    };
+
     return (
         <>
             <AnimatePresence>
@@ -125,7 +160,7 @@ export default function Header({ riccardoData }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isLoading ? 0 : 1 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white min-h-screen flex items-center justify-center"
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white min-h-screen flex items-center justify-center relative"
             >
                 <div className="container mx-auto px-4">
                     <motion.div
@@ -201,6 +236,46 @@ export default function Header({ riccardoData }) {
                                 <SocialLinks className="flex space-x-4" />
                             </motion.div>
                         </motion.div>
+
+                        <AnimatePresence>
+                            {showEnterButton && (
+                                <motion.button
+                                    variants={enterButtonVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    whileHover="hover"
+                                    whileTap="tap"
+                                    exit="hidden"
+                                    className="mt-16 bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg backdrop-blur-sm bg-opacity-90 flex items-center gap-2 group relative"
+                                >
+                                    <span className="relative z-10">Enter Site</span>
+                                    <motion.span
+                                        animate={{ x: [0, 5, 0] }}
+                                        transition={{
+                                            duration: 1.5,
+                                            repeat: Infinity,
+                                            repeatType: "reverse",
+                                            ease: "easeInOut"
+                                        }}
+                                        className="inline-block relative z-10"
+                                    >
+                                        →
+                                    </motion.span>
+                                    <motion.div
+                                        className="absolute inset-0 rounded-full bg-white opacity-50"
+                                        animate={{
+                                            scale: [1, 1.2, 1],
+                                        }}
+                                        transition={{
+                                            duration: 2,
+                                            repeat: Infinity,
+                                            repeatType: "reverse",
+                                            ease: "easeInOut"
+                                        }}
+                                    />
+                                </motion.button>
+                            )}
+                        </AnimatePresence>
                     </motion.div>
                 </div>
             </motion.header>

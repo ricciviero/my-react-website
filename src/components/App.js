@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // importazione componenti
 import Home from './Home.js';
-import Footer from './Footer.js';
 import PrivacyPolicy from './PrivacyPolicy.js';
 
 // Analytics
@@ -24,7 +23,6 @@ const App = () => {
       </Router>
 
       <Analytics />
-      <Footer />
 
     </>
   );
